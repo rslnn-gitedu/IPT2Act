@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROTA Global Innovations Corp. Hiring</title>
+
+    <style>
+        body {
+            background: #f5f5f5; /* Light background for better contrast */
+            font-family: Arial, sans-serif; /* Use a clean, modern font */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White background for the form */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+
+        .LOGO img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .form__title {
+            font-size: 30px;
+            font-weight: bold;
+            color: #042d62;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .form__instruction {
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        fieldset {
+            border: 1px solid #ccc; /* Light border for fieldsets */
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-size: 22px;
+            font-weight: bold;
+            color: #042d62;
+        }
+
+        label {
+            width: 150px;
+            display: inline-block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: calc(100% - 160px); /* Full-width input with space for label */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        input[type="radio"] {
+            width: auto; /* For radio buttons, prevent full width */
+            margin-left: 10px;
+        }
+
+        textarea {
+            resize: vertical; /* Allow vertical resizing */
+            height: 100px; /* Default height */
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #009579; /* Highlight border on focus */
+            background-color: #e7f3ed; /* Slight background change */
+            outline: none; /* Remove the default outline */
+        }
+
+        .button-container {
+            text-align: center; /* Center buttons horizontally */
+        }
+
+        .form__button {
+            display: inline-block;
+            width: 150px;
+            padding: 10px 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #042d62;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form__button:hover {
+            background-color: #009579;
+        }
+
+        .form__button:active {
+            transform: scale(0.98);
+        }
+    </style>
+
+    <script>
+        function showAlert(event) {
+            if (document.querySelector("form").checkValidity()) {
+                alert("Form submitted successfully");
+            } else {
+                alert("Please fill in all the fields");
+                event.preventDefault(); // only prevent default if the form is invalid
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="LOGO">
+        <img src="ROTAsqr.png" alt="LOGO" class="LOGO">
+    </div>
+
+    <main>
+        <div class="container">
+            <form class="jobApplication" onsubmit="showAlert(event)">
+                <h1 class="form__title">ROTA Global Innovations Corp. <br>Job Application Form</h1>
+
+                <p class="form__instruction">Please fill out all necessary information before submitting your application.</p>
+
+                <fieldset>
+                    <legend>Personal Information:</legend>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" maxlength="30" required placeholder="Last Name">
+                    <br>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" maxlength="30" required placeholder="First Name">
+                    <br>
+                    <label for="middleName">Middle Name:</label>
+                    <input type="text" id="middleName" maxlength="30" required placeholder="Middle Name">
+                    <br>
+                    <label for="nameExtension">Name Extension:</label>
+                    <input type="text" id="nameExtension" maxlength="20" placeholder="e.g. Jr., Sr., etc.">
+                    <br>
+                    <label for="sex">Sex:</label>
+                    <input type="radio" id="female" name="sex" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="male" name="sex" required>
+                    <label for="male">Male</label>
+                    <br>
+                    <label for="citizenship">Citizenship:</label>
+                    <input type="text" id="citizenship" required placeholder="e.g. Filipino, American, etc.">
+                    <br>
+                    <label for="civilStatus">Civil Status:</label>
+                    <select id="civilStatus">
+                        <option value="Single" selected>Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Widowed">Widowed</option>
+                        <option value="Separated">Separated</option>
+                    </select>
+                    <br>
+                    <label for="dateOfBirth">Date of Birth:</label>
+                    <input type="date" id="dateOfBirth" required min="1920-01-01" max="2024-10-20">
+                    <br>
+                    <label for="placeOfBirth">Place of Birth:</label>
+                    <input type="text" id="placeOfBirth" maxlength="20" required placeholder="Place of Birth">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Address</legend>
+                    <label for="unitFloor">Unit/Floor/Room No.:</label>
+                    <input type="number" id="unitFloor" placeholder="Unit/Floor/Room No.">
+                    <br>
+                    <label for="building">Building:</label>
+                    <input type="text" id="building" placeholder="e.g. Building 1, etc.">
+                    <br>
+                    <label for="blockNo">Block No.:</label>
+                    <input type="number" id="blockNo" placeholder="Block No.">
+                    <br>
+                    <label for="street">Street:</label>
+                    <input type="text" id="street" placeholder="Street">
+                    <br>
+                    <label for="subdivision">Subdivision:</label>
+                    <input type="text" id="subdivision" placeholder="Subdivision">
+                    <br>
+                    <label for="barangay">Barangay:</label>
+                    <input type="text" id="barangay" placeholder="Barangay">
+                    <br>
+                    <label for="city">City/Municipality:</label>
+                    <input type="text" id="city" required placeholder="City/Municipality">
+                    <br>
+                    <label for="province">Province:</label>
+                    <input type="text" id="province" required placeholder="Province">
+                    <br>
+                    <label for="zipCode">Zip Code:</label>
+                    <input type="text" id="zipCode" required placeholder="4-digit code" maxlength="4">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contacts</legend>
+                    <label for="contactNumber">Contact Number:</label>
+                    <input type="tel" id="contactNumber" pattern="\d{11}" required placeholder="Contact Number">
+                    <br>
+                    <label for="emailAddress">Email Address:</label>
+                    <input type="email" id="emailAddress" required placeholder="e.g. example@gmail.com">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Educational Background</legend>
+                    <label for="elementary">Elementary:</label>
+                    <input type="text" id="elementary" placeholder="Elementary">
+                    <br>
+                    <label for="secondaryJHS">Secondary (JHS):</label>
+                    <input type="text" id="secondaryJHS" placeholder="Secondary (JHS)">
+                    <br>
+                    <label for="secondarySHS">Secondary (SHS):</label>
+                    <input type="text" id="secondarySHS" placeholder="Secondary (SHS)">
+                    <br>
+                    <label for="college">College:</label>
+                    <input type="text" id="college" placeholder="College">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Skills</legend>
+                    <textarea id="skills" rows="5" cols="50" placeholder="List your skills..."></textarea>
+                </fieldset>
+
+                <div class="button-container">
+                    <button type="submit" class="form__button">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
